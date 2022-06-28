@@ -1,6 +1,7 @@
 package jm.task.core.jdbc;
 
 import jm.task.core.jdbc.model.User;
+import jm.task.core.jdbc.service.UserService;
 import jm.task.core.jdbc.service.UserServiceImpl;
 
 public class Main {
@@ -13,7 +14,7 @@ public class Main {
         User user3 = new User("Morty", "Smite", (byte)14);
         User user4 = new User("Gena", "The Crocodile", (byte)30);
 
-        UserServiceImpl userService = new UserServiceImpl();
+        UserService userService = new UserServiceImpl();
 
         userService.createUsersTable();
         userService.saveUser(user1.getName(), user1.getLastName(), user1.getAge());
@@ -31,12 +32,7 @@ public class Main {
         }
 
         userService.cleanUsersTable();
-
         userService.dropUsersTable();
-
-
-
-
 
     }
 }

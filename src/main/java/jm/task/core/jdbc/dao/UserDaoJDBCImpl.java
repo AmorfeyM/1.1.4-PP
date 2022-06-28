@@ -13,8 +13,6 @@ import java.util.List;
 public class UserDaoJDBCImpl implements UserDao {
 
     public UserDaoJDBCImpl() {
-        //можно создать блок трай с ресурсами для коннекш. Тогда вводим поле класса и используем его в каждом методе
-        //не выходит. Не получается назначить полю коннекшн значение из блока трай.
     }
 
     public void createUsersTable() {
